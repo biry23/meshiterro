@@ -1,0 +1,2 @@
+module PostImages　newHelper
+end
