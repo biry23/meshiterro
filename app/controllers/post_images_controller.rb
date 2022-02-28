@@ -1,17 +1,18 @@
 class PostImagesController < ApplicationController
   def index
+    @post_images = PostImage.all
   end
 
   def show
   end
-  
+
   def destroy
-  end  
+  end
 
   def new
     @post_image = PostImage.new
   end
-  
+
   # 投稿データの保存
   def create
     @post_image = PostImage.new(post_image_params)
@@ -19,7 +20,7 @@ class PostImagesController < ApplicationController
     @post_image.save
     redirect_to post_images_path
   end
-  
+
    # 投稿データのストロングパラメータ
   private
 
